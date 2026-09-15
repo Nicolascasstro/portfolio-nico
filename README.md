@@ -1,16 +1,35 @@
-# React + Vite
+# Portfolio — Nicolas Martinez
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Landing de una sola página que presenta a Nicolas Martinez, desarrollador fullstack en transición desde soporte técnico. Incluye proyectos, skills, contacto y un selector de idioma ES/EN.
 
-Currently, two official plugins are available:
+Construido con React y Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Desarrollo
 
-## React Compiler
+```bash
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Otros comandos:
 
-## Expanding the Oxlint configuration
+```bash
+npm run build    # build de producción
+npm run preview  # sirve el build de producción localmente
+npm run lint      # oxlint
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Estructura
+
+- `src/data/translations.js` — todos los textos en ES/EN.
+- `src/data/profile.js` — email, LinkedIn, GitHub y enlace del CV (editar antes de publicar).
+- `src/data/projects.js` — proyectos mostrados en la sección Proyectos.
+- `src/data/skills.js` — lista de skills.
+- `src/context/LanguageContext.jsx` — estado del idioma activo (ES/EN).
+- `src/components/` — un componente por sección (Header, Hero, About, Projects, Skills, Contact, Footer).
+
+## Personalización
+
+Para agregar un proyecto nuevo, se agrega un objeto al arreglo en `src/data/projects.js` siguiendo la misma estructura (nombre, estado, tecnologías, enlaces de demo/código y, opcionalmente, problema y decisiones técnicas por idioma).
+
+Antes de compartir la página, reemplaza los enlaces marcados como `EDIT_ME` en `src/data/profile.js` y `src/data/projects.js`, y sustituye `public/cv-nicolas-martinez.pdf` por el CV real.
